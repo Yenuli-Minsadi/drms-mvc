@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="603.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.MedicalInfoController">
+   <children>
+      <Label layoutX="86.0" layoutY="80.0" text="Medical Record ID:" />
+      <Label fx:id="lblMedRecId" layoutX="197.0" layoutY="80.0" text="MR050" />
+      <Label layoutX="145.0" layoutY="119.0" text="Dog ID:" />
+      <Label layoutX="152.0" layoutY="155.0" text="VetID:" />
+      <Label layoutX="72.0" layoutY="188.0" text="Medical Record Date:" />
+      <Label layoutX="129.0" layoutY="231.0" text="Diagnosis:" />
+      <Label layoutX="374.0" layoutY="80.0" text="Treatments:" />
+      <Label layoutX="374.0" layoutY="119.0" text="Medication:" />
+      <Label layoutX="402.0" layoutY="155.0" text="Notes:" />
+      <Label layoutX="375.0" layoutY="223.0" text="Lab Report:" />
+      <Label layoutX="368.0" layoutY="259.0" text="LR Reference:" />
+      <TextField fx:id="txtDogId" layoutX="197.0" layoutY="115.0" />
+      <TextField fx:id="txtVetId" layoutX="197.0" layoutY="151.0" />
+      <DatePicker fx:id="dateMedRecDate" layoutX="197.0" layoutY="184.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="txtDiagnosis" layoutX="197.0" layoutY="227.0" />
+      <TextField fx:id="txtTreatments" layoutX="447.0" layoutY="76.0" />
+      <TextField fx:id="txtMedication" layoutX="447.0" layoutY="115.0" />
+      <TextArea fx:id="txtNotes" layoutX="447.0" layoutY="152.0" prefHeight="52.0" prefWidth="200.0" />
+      <ComboBox fx:id="comboLabReport" layoutX="447.0" layoutY="219.0" prefWidth="150.0" />
+      <TextField fx:id="txtLabReportRef" layoutX="447.0" layoutY="255.0" />
+      <HBox alignment="CENTER" layoutX="696.0" layoutY="55.0" prefHeight="25.0" prefWidth="231.0" spacing="13.0">
+         <children>
+            <TextField fx:id="txtMedRecSearch" />
+            <Button mnemonicParsing="false" onAction="#btnMedRecSearchOnAction" text="Search" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="762.0" layoutY="104.0" prefHeight="124.0" prefWidth="174.0" spacing="13.0">
+         <children>
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnMedRecSaveOnAction" prefHeight="30.0" prefWidth="120.0" text="Save" />
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnMedRecUpdateOnAction" prefHeight="30.0" prefWidth="120.0" text="Update" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnMedRecDeleteOnAction" prefHeight="30.0" prefWidth="120.0" text="Delete" />
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnMedRecResetOnAction" prefHeight="30.0" prefWidth="120.0" text="Reset" />
+            <Button fx:id="btnGenReport" mnemonicParsing="false" onAction="#btnMedRecGenerateReportOnAction" prefHeight="30.0" prefWidth="120.0" text="Generate Report" />
+         </children>
+      </VBox>
+      <TableView fx:id="tblMedicalRec" layoutY="324.0" onMouseClicked="#onClickTable" prefHeight="279.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="colMedRecId" prefWidth="75.0" text="C1" />
+          <TableColumn fx:id="colDogId" prefWidth="93.0" text="C2" />
+            <TableColumn fx:id="colVetId" prefWidth="91.0" text="Column X" />
+            <TableColumn fx:id="colMedRecDate" prefWidth="103.0" text="Column X" />
+            <TableColumn fx:id="colDiagnosis" prefWidth="110.0" text="Column X" />
+            <TableColumn fx:id="colTreatments" prefWidth="108.0" text="Column X" />
+            <TableColumn fx:id="colMedications" prefWidth="104.0" text="Column X" />
+            <TableColumn fx:id="colVetNotes" prefWidth="103.0" text="Column X" />
+            <TableColumn fx:id="colLabRep" prefWidth="99.0" text="Column X" />
+            <TableColumn fx:id="colLabRepRef" prefWidth="113.0" text="Column X" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

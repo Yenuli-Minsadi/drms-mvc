@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<AnchorPane prefHeight="603.0" prefWidth="1000.0" style="-fx-background-color: #130f40;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.HomePageController">
+   <children>
+      <StackPane layoutX="316.0" layoutY="103.0" prefHeight="358.0" prefWidth="368.0" AnchorPane.leftAnchor="316.0" AnchorPane.rightAnchor="316.0">
+         <children>
+            <ImageView fitHeight="338.0" fitWidth="382.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="https://images.squarespace-cdn.com/content/v1/607f89e638219e13eee71b1e/1624325486961-H1QWKQ8XCDGASHU3HR8L/HPHH-Logo_stacked-white.png?format=1500w" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

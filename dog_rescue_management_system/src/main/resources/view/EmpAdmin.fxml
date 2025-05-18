@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="603.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.EmpAdminController">
+   <children>
+      <Label layoutX="145.0" layoutY="68.0" text="Admin ID:" />
+      <Label fx:id="lblAdminId" layoutX="219.0" layoutY="68.0" text="A001" />
+      <Label layoutX="125.0" layoutY="121.0" text="Admin Name:" />
+      <Label layoutX="118.0" layoutY="165.0" text="Admin Contact:" />
+      <Label layoutX="129.0" layoutY="210.0" text="Admin Email:" />
+      <Label layoutX="402.0" layoutY="68.0" text="Admin Address:" />
+      <TextField fx:id="txtAdminName" layoutX="207.0" layoutY="117.0" />
+      <TextField fx:id="txtAdminContact" layoutX="207.0" layoutY="161.0" />
+      <TextField fx:id="txtAdminEmail" layoutX="207.0" layoutY="206.0" />
+      <TextField fx:id="txtAdminAddress" layoutX="494.0" layoutY="64.0" />
+      <HBox alignment="CENTER" layoutX="705.0" layoutY="61.0" prefHeight="25.0" prefWidth="238.0" spacing="13.0">
+         <children>
+            <TextField fx:id="txtAdminSearch" />
+            <Button mnemonicParsing="false" onAction="#btnAdminSearchOnAction" text="Search" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="774.0" layoutY="106.0" prefHeight="124.0" prefWidth="174.0" spacing="13.0">
+         <children>
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnAdminSaveOnAction" prefHeight="30.0" prefWidth="120.0" text="Save" />
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnAdminUpdateOnAction" prefHeight="30.0" prefWidth="120.0" text="Update" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnAdminDeleteOnAction" prefHeight="30.0" prefWidth="120.0" text="Delete" />
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnAdminResetOnAction" prefHeight="30.0" prefWidth="120.0" text="Reset" />
+            <Button fx:id="btnGenRep" mnemonicParsing="false" onAction="#btnAdminGenReportOnAction" prefHeight="30.0" prefWidth="120.0" text="Generate Report" />
+         </children>
+      </VBox>
+      <TableView fx:id="tblAdmin" layoutY="332.0" onMouseClicked="#onClickTable" prefHeight="271.0" prefWidth="1000.0">
+        <columns>
+          <TableColumn fx:id="colAdminId" prefWidth="75.0" text="C1" />
+          <TableColumn fx:id="colAdminName" prefWidth="75.0" text="C2" />
+            <TableColumn fx:id="colAdminContact" prefWidth="75.0" text="Column X" />
+            <TableColumn fx:id="colAdminEmail" prefWidth="75.0" text="Column X" />
+            <TableColumn fx:id="colAdminAddress" prefWidth="75.0" text="Column X" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

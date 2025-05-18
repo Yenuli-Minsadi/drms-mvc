@@ -1,0 +1,9 @@
+loginButton {
+    -fx-background-color: #0d1b4c;
+    -fx-text-fill: white;
+}
+
+#loginButton:hover {
+    -fx-background-color: #6a89cc;
+    -fx-cursor: hand;
+}

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mysql-connector-j-9.2.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dog_rescue_management_system/src/main/java/lk/ijse/dog_rescue_management_system/lib/mysql-connector-j-9.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.LogInController">
+   <children>
+      <AnchorPane fx:id="ancLogin" prefHeight="166.0" prefWidth="705.0" style="-fx-background-color: #1B1464;" StackPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="166.0" prefWidth="705.0" style="-fx-background-color: #130f40;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="148.0" fitWidth="191.0" layoutX="274.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="465.0" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="262.96665954589844" AnchorPane.topAnchor="-6.0">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="163.0" prefHeight="452.0" prefWidth="700.0" style="-fx-background-color: #b71540;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
+               <children>
+                  <TextField fx:id="txtUsername" blendMode="OVERLAY" layoutX="291.0" layoutY="135.0" onKeyPressed="#handleKeyPressed" prefHeight="25.0" prefWidth="200.0" promptText="username" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="291.0" AnchorPane.rightAnchor="218.0" AnchorPane.topAnchor="135.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="31.23" radius="14.807500000000001" width="30.0" />
+                     </effect>
+                  </TextField>
+                  <PasswordField fx:id="pwdPassword" blendMode="OVERLAY" layoutX="291.0" layoutY="179.0" onKeyPressed="#handleKeyPressed" prefHeight="27.0" prefWidth="191.0" promptText="password" AnchorPane.bottomAnchor="269.0" AnchorPane.leftAnchor="291.0" AnchorPane.rightAnchor="218.0" AnchorPane.topAnchor="179.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="18.0" radius="11.5" width="30.0" />
+                     </effect>
+                  </PasswordField>
+                  <Label layoutX="210.0" layoutY="138.0" text="Username: " textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft PhagsPa" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="214.0" layoutY="181.0" text="Password: " textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft PhagsPa" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loginButton" layoutX="420.0" layoutY="237.0" mnemonicParsing="false" onAction="#btnLogInOnAction" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #130f40;" text="Log In" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="394.0" layoutY="212.0" onMouseClicked="#lblForgotPasswordOnMouseClicked" styleClass="clickable-label" text="forgot password?" textFill="#acaeb2">
+                     <font>
+                        <Font name="Microsoft PhagsPa" size="12.0" />
+                     </font>
+                  </Label>
+                  <Line endX="1.1641845703125" endY="225.0" layoutX="540.0" layoutY="122.0" startX="1.1641845703125" startY="-38.9141845703125" stroke="#130f40" strokeLineJoin="ROUND" />
+                  <Line endX="37.0" layoutX="264.0" layoutY="84.0" startX="-102.10354614257812" stroke="#130f40" strokeLineJoin="ROUND" />
+                  <Line endX="365.6641845703125" endY="-27.5" layoutX="175.0" layoutY="375.0" startX="-13.0" startY="-27.5" stroke="#130f40" strokeLineJoin="ROUND" />
+                  <Line endX="37.5" endY="110.0" layoutX="124.0" layoutY="237.0" startX="37.29290771484375" startY="-152.29290771484375" stroke="#130f40" strokeLineJoin="ROUND" />
+                  <Line endX="44.0" layoutX="496.0" layoutY="83.0" startX="-90.0" stroke="#130f40" strokeLineJoin="ROUND" />
+                  <Label blendMode="SRC_ATOP" layoutX="307.0" layoutY="65.0" prefHeight="29.0" prefWidth="93.0" text="Welcome" textFill="#8fe7ff">
+                     <font>
+                        <Font name="Microsoft PhagsPa" size="22.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" height="8.32" radius="10.6925" width="36.45" />
+                     </effect>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
