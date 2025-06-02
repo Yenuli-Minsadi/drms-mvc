@@ -20,6 +20,7 @@ public class RequestTM {
     private String urgencyLevel;
     private String requestNotes;
     private String caseType;
+    private String requestContact;
 
 
 }

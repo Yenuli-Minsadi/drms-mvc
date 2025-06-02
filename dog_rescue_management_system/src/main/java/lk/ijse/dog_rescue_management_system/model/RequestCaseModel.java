@@ -61,7 +61,7 @@ public class RequestCaseModel {
 //        return isSaved;
 
         return CrudUtil.execute(
-                "insert into rescue_request (request_id, rescuer_id, location, reason, case_type, urgency_level, request_date, request_status, request_notes) values (?,?,?,?,?,?,?,?,?)",
+                "insert into rescue_request (request_id, rescuer_id, location, reason, case_type, urgency_level, request_date, request_status, request_notes, contact_number) values (?,?,?,?,?,?,?,?,?,?)",
                 requestCaseDto.getRequestId(),
                 requestCaseDto.getRescuerId(),
                 requestCaseDto.getLocation(),
@@ -70,7 +70,9 @@ public class RequestCaseModel {
                 requestCaseDto.getUrgencyLevel(),
                 requestCaseDto.getRequestDate(),
                 requestCaseDto.getRequestStatus(),
-                requestCaseDto.getRequestNote()
+                requestCaseDto.getRequestNote(),
+                requestCaseDto.getRequestContact()
+
                 );
     }
 
@@ -150,6 +152,7 @@ public class RequestCaseModel {
 
                 String requestStatus = resultSet.getString("request_status");
                 String requestNotes = resultSet.getString("request_notes");
+                String requestContact = resultSet.getString("contact_number");
 
                 RequestCaseDto requestCaseDto = new RequestCaseDto(
                         requestId,
@@ -160,7 +163,8 @@ public class RequestCaseModel {
                         urgencyLevel,
                         requestDate,
                         requestStatus,
-                        requestNotes
+                        requestNotes,
+                        requestContact
                 );
                 requestCaseDtoArrayList.add(requestCaseDto);
             } catch (SQLException e) {

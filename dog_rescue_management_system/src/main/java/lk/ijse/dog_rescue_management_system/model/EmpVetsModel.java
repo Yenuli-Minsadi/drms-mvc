@@ -39,7 +39,7 @@ public class EmpVetsModel {
 
     public boolean saveVet(VetDto vetDto) throws Exception {
         return CrudUtil.execute(
-                "update vet set vet_id=?, vet_name=?, clinic_name=?, specialization =?, vet_license_num=?, vet_contact = ?, vet_email = ?, vet_address = ?, availability = ?, salary = ?",
+                "insert into vet set vet_id=?, vet_name=?, clinic_name=?, specialization =?, vet_license_num=?, vet_contact = ?, vet_email = ?, vet_address = ?, availability = ?, salary = ?",
                 vetDto.getVetId(),
                 vetDto.getVetName(),
                 vetDto.getVetClinicName(),

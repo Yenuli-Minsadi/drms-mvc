@@ -73,16 +73,16 @@ public class DogRegisterModel {
 //        return isSaved;
 
         return CrudUtil.execute(
-                "insert into dog (dog_id, rescue_request_id, dog_name, dog_breed, dog_birth_date, dog_color, dog_size, dog_gender, dog_status) values (?,?,?,?,?,?,?,?,?)",
+                "insert into dog (dog_id, rescue_request_id, dog_name, dog_breed, dog_color, dog_size, dog_gender, dog_status, estimated_age) values (?,?,?,?,?,?,?,?,?)",
                 dogDto.getDogId(),
                 dogDto.getRescueRequestId(),
                 dogDto.getDogName(),
                 dogDto.getDogBreed(),
-                dogDto.getBirthDate(),
                 dogDto.getDogColor(),
                 dogDto.getDogSize(),
                 dogDto.getDogGender(),
-                dogDto.getDogStatus()
+                dogDto.getDogStatus(),
+                dogDto.getDogEstAge()
         );
     }
 
@@ -95,15 +95,15 @@ public class DogRegisterModel {
 
     public boolean updateDog(DogDto dogDto) throws Exception {
         return CrudUtil.execute(
-                "update dog set rescue_request_id =?, dog_name =?, dog_breed =?, dog_birth_date =?, dog_color = ?, dog_size = ?, dog_gender = ?, dog_status = ? where dog_id =?",
+                "update dog set rescue_request_id =?, dog_name =?, dog_breed =?, dog_color =?, dog_size =?, dog_gender =?, dog_status =?, estimated_age =? where dog_id =?",
                 dogDto.getRescueRequestId(),
                 dogDto.getDogName(),
                 dogDto.getDogBreed(),
-                dogDto.getBirthDate(),
                 dogDto.getDogColor(),
                 dogDto.getDogSize(),
                 dogDto.getDogGender(),
                 dogDto.getDogStatus(),
+                dogDto.getDogEstAge(),
                 dogDto.getDogId()
         );
     }
@@ -121,47 +121,22 @@ public class DogRegisterModel {
                 String rescueRequestId = resultSet.getString("rescue_request_id");
                 String dogName = resultSet.getString("dog_name");
                 String dogBreed = resultSet.getString("dog_breed");
-
-                // Safely handle date conversion
-                LocalDate dogBirthdate;
-                try {
-                    // First attempt to get as a proper date
-                    java.sql.Date sqlDate = resultSet.getDate("dog_birth_date");
-                    if (sqlDate != null) {
-                        dogBirthdate = sqlDate.toLocalDate();
-                    } else {
-                        // If date is null, use current date ->wrong
-                        dogBirthdate = LocalDate.now();
-                    }
-                } catch (SQLException e) {
-                    // If there's an error (possibly because it's not a valid date format)
-                    // Get as string and try to parse it
-                    String dateStr = resultSet.getString("dog_birth_date");
-                    try {
-                        dogBirthdate = LocalDate.parse(dateStr);
-                    } catch (Exception ex) {
-                        // If parsing fails, use current date as fallback
-                        dogBirthdate = LocalDate.now();
-                        System.out.println("Warning: Could not parse date value for request ID " +
-                                dogId + ": " + dateStr + ". Using current date instead.");
-                    }
-                }
-
                 String dogColor = resultSet.getString("dog_color");
                 String dogSize = resultSet.getString("dog_size");
                 String dogGender = resultSet.getString("dog_gender");
                 String dogStatus = resultSet.getString("dog_status");
+                String dogEstAge = resultSet.getString("estimated_age");
 
                 DogDto dogDto = new DogDto(
                         dogId,
                         rescueRequestId,
                         dogName,
                         dogBreed,
-                        dogBirthdate,
                         dogColor,
                         dogSize,
                         dogGender,
-                        dogStatus
+                        dogStatus,
+                        dogEstAge
                 );
                 dogRegisterDtoArrayList.add(dogDto);
             } catch (SQLException e) {

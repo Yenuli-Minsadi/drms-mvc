@@ -20,7 +20,7 @@ public class MedicalRecordDto {
     private String treatment;
     private String medication;
     private String vetNote;
-    private Boolean hasLabReport;
+    private String hasLabReport;
     private String labReportReference;
 
 }

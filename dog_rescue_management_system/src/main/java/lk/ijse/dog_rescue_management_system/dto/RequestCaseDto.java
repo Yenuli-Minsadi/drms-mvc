@@ -20,6 +20,7 @@ public class RequestCaseDto {
     private LocalDate requestDate;
     private String requestStatus;
     private String requestNote;
+    private String requestContact;
 
 
 

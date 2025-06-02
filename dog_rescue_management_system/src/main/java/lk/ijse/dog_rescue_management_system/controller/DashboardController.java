@@ -37,7 +37,7 @@ public class DashboardController implements Initializable {
     @FXML
     void btnRequestOnAction(ActionEvent event) throws IOException {
         ancMainDash.getChildren().clear();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/RequestCase.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/Request.fxml"));
 
         pane.prefWidthProperty().bind(ancMainDash.widthProperty());
         pane.prefHeightProperty().bind(ancMainDash.heightProperty());
@@ -148,13 +148,13 @@ public class DashboardController implements Initializable {
 
     @FXML
     void btnLogoutOnAction(ActionEvent event) {
-        // Create a confirmation alert
+
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout Confirmation");
         alert.setHeaderText(null);
         alert.setContentText("Are you sure you want to logout?");
 
-        // Show the alert and wait for user's response
+
         alert.showAndWait().ifPresent(response -> {
             if (response == javafx.scene.control.ButtonType.OK) {
                 try {
@@ -174,11 +174,8 @@ public class DashboardController implements Initializable {
                     e.printStackTrace();
                 }
             }
-            // If the user presses CANCEL, do nothing (stay on the dashboard)
         });
     }
-
-
 
     private void navigateTo(String path) {
         try {

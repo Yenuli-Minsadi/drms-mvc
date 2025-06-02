@@ -28,22 +28,23 @@ public class DogRegisterController implements Initializable {
     public TextField txtReqId;
     public TextField txtDogName;
     public TextField txtDogBreed;
-    public DatePicker dateDogBirthday;
     public TextField txtDogColor;
     public ComboBox<String> comboDogSize;
     public ComboBox<String> comboDogGender;
     public ComboBox<String> comboDogStatus;
+    public TextField txtEstAge;
+
 
     public TableView<DogRegisterTM> tblDogReg;
     public TableColumn<DogRegisterTM, String> colDogId;
     public TableColumn<DogRegisterTM, String> colRescueRequestId;
     public TableColumn<DogRegisterTM, String> colDogName;
     public TableColumn<DogRegisterTM, String> colDogBreed;
-    public TableColumn<DogRegisterTM, String> colDogBirthdate;
     public TableColumn<DogRegisterTM, String> colDogColor;
     public TableColumn<DogRegisterTM, String> colDogSize;
     public TableColumn<DogRegisterTM, String> colDogGender;
     public TableColumn<DogRegisterTM, String> colDogStatus;
+    public TableColumn<DogRegisterTM, String> colDogAge;
 
 
     @FXML
@@ -69,27 +70,28 @@ public class DogRegisterController implements Initializable {
         String rescueRequestId = txtReqId.getText();
         String dogName = txtDogName.getText();
         String dogBreed = txtDogBreed.getText();
-        LocalDate birthDate = LocalDate.parse(dateDogBirthday.getValue().toString());
         String dogColor = txtDogColor.getText();
         String dogSize = comboDogSize.getValue().toString();
         String dogGender = comboDogGender.getValue().toString();
         String dogStatus = comboDogStatus.getValue().toString();
+        String dogEstAge = txtEstAge.getText();
 
         DogDto dogDto = new DogDto (
                 dogId,
                 rescueRequestId,
                 dogName,
                 dogBreed,
-                birthDate,
                 dogColor,
                 dogSize,
                 dogGender,
-                dogStatus
+                dogStatus,
+                dogEstAge
         );
 
         try {
             boolean isSaved = dogRegisterModel.saveDog(dogDto);
             if (isSaved) {
+                resetPage();
                 new Alert(Alert.AlertType.INFORMATION, "Dog Saved Successfully!").show();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Failed to save Dog").show();
@@ -105,14 +107,23 @@ public class DogRegisterController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         colDogId.setCellValueFactory(new PropertyValueFactory<>("dogId"));
+        colDogId.setText("Dog ID");
         colRescueRequestId.setCellValueFactory(new PropertyValueFactory<>("rescueRequestId"));
+        colRescueRequestId.setText("Rescue Request ID");
         colDogName.setCellValueFactory(new PropertyValueFactory<>("dogName"));
+        colDogName.setText("Name");
         colDogBreed.setCellValueFactory(new PropertyValueFactory<>("dogBreed"));
-        colDogBirthdate.setCellValueFactory(new PropertyValueFactory<>("dogBirthdate"));
+        colDogBreed.setText("Breed");
         colDogColor.setCellValueFactory(new PropertyValueFactory<>("dogColor"));
+        colDogColor.setText("Color");
         colDogSize.setCellValueFactory(new PropertyValueFactory<>("dogSize"));
+        colDogSize.setText("Size");
         colDogGender.setCellValueFactory(new PropertyValueFactory<>("dogGender"));
+        colDogGender.setText("Gender");
         colDogStatus.setCellValueFactory(new PropertyValueFactory<>("dogStatus"));
+        colDogStatus.setText("Status");
+        colDogAge.setCellValueFactory(new PropertyValueFactory<>("dogEstAge"));
+        colDogAge.setText("Estimated Age");
 
         try {
             loadTableData();
@@ -142,11 +153,11 @@ public class DogRegisterController implements Initializable {
                     dogDto.getRescueRequestId(),
                     dogDto.getDogName(),
                     dogDto.getDogBreed(),
-                    dogDto.getBirthDate(),
                     dogDto.getDogColor(),
                     dogDto.getDogSize(),
                     dogDto.getDogGender(),
-                    dogDto.getDogStatus()
+                    dogDto.getDogStatus(),
+                    dogDto.getDogEstAge()
             );
             dogRegisterTMS.add(dogRegisterTM);
         }
@@ -158,27 +169,28 @@ public class DogRegisterController implements Initializable {
         String rescueRequestId = txtReqId.getText();
         String dogName = txtDogName.getText();
         String dogBreed = txtDogBreed.getText();
-        LocalDate birthDate = LocalDate.parse(dateDogBirthday.getValue().toString());
         String dogColor = txtDogColor.getText();
         String dogSize = comboDogSize.getValue().toString();
         String dogGender = comboDogGender.getValue().toString();
         String dogStatus = comboDogStatus.getValue().toString();
+        String dogEstAge = txtEstAge.getText();
 
         DogDto dogDto = new DogDto (
                 dogId,
                 rescueRequestId,
                 dogName,
                 dogBreed,
-                birthDate,
                 dogColor,
                 dogSize,
                 dogGender,
-                dogStatus
+                dogStatus,
+                dogEstAge
         );
 
         try {
             boolean isUpdated = dogRegisterModel.updateDog(dogDto);
             if (isUpdated) {
+                resetPage();
                 new Alert(Alert.AlertType.INFORMATION, "Dog Updated Successfully!").show();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Failed to update Dog").show();
@@ -235,11 +247,11 @@ public class DogRegisterController implements Initializable {
             txtReqId.setText("");
             txtDogName.setText("");
             txtDogBreed.setText("");
-            dateDogBirthday.setValue(null);
-            txtDogColor.setText(null);
+            txtDogColor.setText("");
             comboDogSize.setValue(null);
             comboDogGender.setValue(null);
             comboDogStatus.setValue(null);
+            txtEstAge.setText("");
         } catch (Exception e) {
             e.printStackTrace();
             new Alert(Alert.AlertType.ERROR, "Something went wrong.").show();
@@ -261,11 +273,11 @@ public class DogRegisterController implements Initializable {
             txtReqId.setText(selectedDog.getRescueRequestId());
             txtDogName.setText(selectedDog.getDogName());
             txtDogBreed.setText(selectedDog.getDogBreed());
-            dateDogBirthday.setValue(selectedDog.getBirthDate());
             txtDogColor.setText(selectedDog.getDogColor());
             comboDogSize.setValue(selectedDog.getDogSize());
             comboDogGender.setValue(selectedDog.getDogGender());
             comboDogStatus.setValue(selectedDog.getDogStatus());
+            txtEstAge.setText(selectedDog.getDogEstAge());
 
             // save button disable
             btnSave.setDisable(true);

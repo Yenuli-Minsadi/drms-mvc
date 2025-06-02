@@ -18,56 +18,70 @@
          <children>
             <AnchorPane prefHeight="166.0" prefWidth="705.0" style="-fx-background-color: #130f40;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ImageView fitHeight="148.0" fitWidth="191.0" layoutX="274.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="465.0" AnchorPane.leftAnchor="274.0" AnchorPane.rightAnchor="262.96665954589844" AnchorPane.topAnchor="-6.0">
+                  <ImageView fitHeight="229.0" fitWidth="253.0" layoutX="219.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/logo.png" />
+                        <Image url="@../images/hphh.png" />
                      </image>
                   </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutY="163.0" prefHeight="452.0" prefWidth="700.0" style="-fx-background-color: #b71540;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
+               </children></AnchorPane>
+            <AnchorPane layoutY="163.0" prefHeight="452.0" prefWidth="700.0" style="-fx-background-color: #130f40; -fx-background-image: F:\IJSE-GDSE73\OOP_FINAL_PROJECT1\dog_rescue_management_system\src\main\resources\images\logo.png;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
                <children>
-                  <TextField fx:id="txtUsername" blendMode="OVERLAY" layoutX="291.0" layoutY="135.0" onKeyPressed="#handleKeyPressed" prefHeight="25.0" prefWidth="200.0" promptText="username" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="291.0" AnchorPane.rightAnchor="218.0" AnchorPane.topAnchor="135.0">
+                  <TextField fx:id="txtUsername" layoutX="285.0" layoutY="135.0" onKeyPressed="#handleKeyPressed" prefHeight="25.0" prefWidth="214.0" promptText="username" style="-fx-background-radius: 13;" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="285.0" AnchorPane.rightAnchor="203.0" AnchorPane.topAnchor="135.0">
                      <effect>
                         <DropShadow blurType="GAUSSIAN" height="31.23" radius="14.807500000000001" width="30.0" />
                      </effect>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                   </TextField>
-                  <PasswordField fx:id="pwdPassword" blendMode="OVERLAY" layoutX="291.0" layoutY="179.0" onKeyPressed="#handleKeyPressed" prefHeight="27.0" prefWidth="191.0" promptText="password" AnchorPane.bottomAnchor="269.0" AnchorPane.leftAnchor="291.0" AnchorPane.rightAnchor="218.0" AnchorPane.topAnchor="179.0">
+                  <PasswordField fx:id="pwdPassword" layoutX="285.0" layoutY="183.0" onKeyPressed="#handleKeyPressed" prefHeight="25.0" prefWidth="214.0" promptText="password" style="-fx-background-radius: 13;" AnchorPane.bottomAnchor="265.0" AnchorPane.leftAnchor="285.0" AnchorPane.rightAnchor="203.0" AnchorPane.topAnchor="183.0">
                      <effect>
                         <DropShadow blurType="GAUSSIAN" height="18.0" radius="11.5" width="30.0" />
                      </effect>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                   </PasswordField>
-                  <Label layoutX="210.0" layoutY="138.0" text="Username: " textFill="WHITE">
+                  <Label layoutX="206.0" layoutY="138.0" text="Username" textFill="WHITE">
                      <font>
-                        <Font name="Microsoft PhagsPa" size="14.0" />
+                        <Font name="Segoe UI Semilight" size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="214.0" layoutY="181.0" text="Password: " textFill="WHITE">
+                  <Label layoutX="209.0" layoutY="186.0" text="Password" textFill="WHITE">
                      <font>
-                        <Font name="Microsoft PhagsPa" size="14.0" />
+                        <Font name="Segoe UI Semilight" size="16.0" />
                      </font>
                   </Label>
-                  <Button fx:id="loginButton" layoutX="420.0" layoutY="237.0" mnemonicParsing="false" onAction="#btnLogInOnAction" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #130f40;" text="Log In" textFill="WHITE">
+                  <Button fx:id="loginButton" layoutX="426.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnLogInOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #130f40; -fx-border-color: #fff; -fx-border-radius: 5;" text="Log In" textFill="WHITE">
                      <font>
-                        <Font size="13.0" />
+                        <Font size="15.0" />
                      </font>
                   </Button>
-                  <Label layoutX="394.0" layoutY="212.0" onMouseClicked="#lblForgotPasswordOnMouseClicked" styleClass="clickable-label" text="forgot password?" textFill="#acaeb2">
+                  <Label layoutX="435.0" layoutY="292.0" onMouseClicked="#lblForgotPasswordOnMouseClicked" styleClass="clickable-label" text="Forgot Password?" textFill="#acaeb2">
                      <font>
                         <Font name="Microsoft PhagsPa" size="12.0" />
                      </font>
                   </Label>
-                  <Line endX="1.1641845703125" endY="225.0" layoutX="540.0" layoutY="122.0" startX="1.1641845703125" startY="-38.9141845703125" stroke="#130f40" strokeLineJoin="ROUND" />
-                  <Line endX="37.0" layoutX="264.0" layoutY="84.0" startX="-102.10354614257812" stroke="#130f40" strokeLineJoin="ROUND" />
-                  <Line endX="365.6641845703125" endY="-27.5" layoutX="175.0" layoutY="375.0" startX="-13.0" startY="-27.5" stroke="#130f40" strokeLineJoin="ROUND" />
-                  <Line endX="37.5" endY="110.0" layoutX="124.0" layoutY="237.0" startX="37.29290771484375" startY="-152.29290771484375" stroke="#130f40" strokeLineJoin="ROUND" />
-                  <Line endX="44.0" layoutX="496.0" layoutY="83.0" startX="-90.0" stroke="#130f40" strokeLineJoin="ROUND" />
-                  <Label blendMode="SRC_ATOP" layoutX="307.0" layoutY="65.0" prefHeight="29.0" prefWidth="93.0" text="Welcome" textFill="#8fe7ff">
+                  <Line endX="1.1641845703125" endY="198.0" layoutX="540.0" layoutY="122.0" startX="1.1641845703125" startY="-38.9141845703125" stroke="WHITE" strokeLineJoin="ROUND" />
+                  <Line endX="25.0" layoutX="264.0" layoutY="84.0" startX="-102.10354614257812" stroke="WHITE" strokeLineJoin="ROUND" />
+                  <Line endX="365.6641845703125" endY="-27.5" layoutX="175.0" layoutY="348.0" startX="-13.0" startY="-27.5" stroke="WHITE" strokeLineJoin="ROUND" />
+                  <Line endX="37.5" endY="83.0" layoutX="124.0" layoutY="237.0" startX="37.29290771484375" startY="-152.29290771484375" stroke="WHITE" strokeLineJoin="ROUND" />
+                  <Line endX="44.0" layoutX="496.0" layoutY="83.0" startX="-80.0" stroke="WHITE" strokeLineJoin="ROUND" />
+                  <Label blendMode="SRC_ATOP" layoutX="295.0" layoutY="58.0" prefHeight="44.0" prefWidth="138.0" text="Welcome" textFill="#8fe7ff">
                      <font>
-                        <Font name="Microsoft PhagsPa" size="22.0" />
+                        <Font name="Segoe UI Semilight" size="28.0" />
                      </font>
                      <effect>
                         <DropShadow blurType="TWO_PASS_BOX" height="8.32" radius="10.6925" width="36.45" />
+                     </effect>
+                  </Label>
+                  <Label layoutX="172.0" layoutY="292.0" text="Create an Account" textFill="#acaeb2" />
+                  <Label layoutX="224.0" layoutY="-22.0" prefHeight="73.0" prefWidth="253.0" text="Happy Paws Happy Hearts" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="22.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
                      </effect>
                   </Label>
                </children>

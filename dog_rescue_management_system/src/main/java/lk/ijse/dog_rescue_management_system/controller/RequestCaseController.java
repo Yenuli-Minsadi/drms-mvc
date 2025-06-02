@@ -30,6 +30,7 @@ public class RequestCaseController implements Initializable {
     public DatePicker dateRequestDate;
     public ComboBox<String> comboRequestStatus;
     public TextArea txtReqNotes;
+    public TextField txtReqContact;
 
     public TableView<RequestTM> tblCase;
     public TableColumn<RequestTM, String> colReqId;
@@ -41,6 +42,7 @@ public class RequestCaseController implements Initializable {
     public TableColumn<RequestTM, String> colUrgencyLevel;
     public TableColumn<RequestTM, String> colReqNotes;
     public TableColumn<RequestTM, String> colCaseType;
+    public TableColumn<RequestTM, String> colReqContact;
 
     @FXML
     private Button btnDelete;
@@ -70,6 +72,7 @@ public class RequestCaseController implements Initializable {
         LocalDate requestDate = dateRequestDate.getValue();
         String requestStatus = comboRequestStatus.getValue();
         String requestNotes = txtReqNotes.getText();
+        String requestContact = txtReqNotes.getText();
 
         RequestCaseDto requestCaseDto = new RequestCaseDto(
                 requestId,
@@ -80,7 +83,8 @@ public class RequestCaseController implements Initializable {
                 urgencyLevel,
                 requestDate,
                 requestStatus,
-                requestNotes
+                requestNotes,
+                requestContact
         );
 
         try {
@@ -112,6 +116,7 @@ public class RequestCaseController implements Initializable {
         colUrgencyLevel.setCellValueFactory(new PropertyValueFactory<>("urgencyLevel"));
         colReqNotes.setCellValueFactory(new PropertyValueFactory<>("requestNotes"));
         colCaseType.setCellValueFactory(new PropertyValueFactory<>("caseType"));
+        colReqContact.setCellValueFactory(new PropertyValueFactory<>("requestContact"));
 
         try{
             loadTableData();
@@ -144,7 +149,8 @@ public class RequestCaseController implements Initializable {
                     requestCaseDto.getReason(),
                     requestCaseDto.getUrgencyLevel(),
                     requestCaseDto.getRequestNote(),
-                    requestCaseDto.getCaseType()
+                    requestCaseDto.getCaseType(),
+                    requestCaseDto.getRequestContact()
             );
             requestTMS.add(requestTM);
         }
@@ -162,6 +168,7 @@ public class RequestCaseController implements Initializable {
         LocalDate requestDate = dateRequestDate.getValue();
         String requestStatus = comboRequestStatus.getValue();
         String requestNotes = txtReqNotes.getText();
+        String requestContact = txtReqContact.getText();
 
         RequestCaseDto requestCaseDto = new RequestCaseDto(
                 requestId,
@@ -172,7 +179,8 @@ public class RequestCaseController implements Initializable {
                 urgencyLevel,
                 requestDate,
                 requestStatus,
-                requestNotes
+                requestNotes,
+                requestContact
         );
 
         try {
@@ -241,6 +249,7 @@ public class RequestCaseController implements Initializable {
             dateRequestDate.setValue(null);
             comboRequestStatus.setValue("");
             txtReqNotes.setText("");
+            txtReqContact.setText("");
         } catch (Exception e) {
             e.printStackTrace();
             new Alert(Alert.AlertType.ERROR, "Something went wrong.").show();
@@ -272,6 +281,7 @@ public class RequestCaseController implements Initializable {
             dateRequestDate.setValue(selectedRequest.getRequestDate());
             comboRequestStatus.setValue(selectedRequest.getRequestStatus());
             txtReqNotes.setText(selectedRequest.getRequestNotes());
+            txtReqContact.setText(selectedRequest.getRequestContact());
 
             // save button disable
             btnSave.setDisable(true);

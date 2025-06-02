@@ -7,59 +7,125 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="603.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.EmpVetsController">
    <children>
-      <Label layoutX="147.0" layoutY="63.0" text="Vet ID:" />
-      <Label fx:id="lblVetId" layoutX="197.0" layoutY="63.0" text="V051" />
-      <Label layoutX="127.0" layoutY="109.0" text="Vet Name:" />
-      <Label layoutX="114.0" layoutY="145.0" text="Clinic Name:" />
-      <Label layoutX="110.0" layoutY="182.0" text="Specialization:" />
-      <Label layoutX="75.0" layoutY="215.0" text="Vet License Number:" />
-      <Label layoutX="405.0" layoutY="63.0" text="Contact:" />
-      <Label layoutX="413.0" layoutY="109.0" text="Email:" />
-      <Label layoutX="404.0" layoutY="154.0" text="Address:" />
-      <Label layoutX="397.0" layoutY="191.0" text="Availability:" />
-      <TextField fx:id="txtVetName" layoutX="197.0" layoutY="105.0" />
-      <TextField fx:id="txtClinicName" layoutX="197.0" layoutY="142.0" />
-      <TextField fx:id="txtVetLicenseNumber" layoutX="197.0" layoutY="211.0" />
-      <TextField fx:id="txtContact" layoutX="457.0" layoutY="59.0" />
-      <TextField fx:id="txtEmail" layoutX="457.0" layoutY="105.0" />
-      <TextField fx:id="txtAddress" layoutX="457.0" layoutY="150.0" />
-      <ComboBox fx:id="comboAvailability" layoutX="464.0" layoutY="191.0" prefWidth="150.0" />
-      <HBox alignment="CENTER" layoutX="695.0" layoutY="55.0" prefHeight="32.0" prefWidth="215.0" spacing="13.0">
+      <Label layoutX="296.0" layoutY="12.0" text="Vet ID" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="lblVetId" layoutX="299.0" layoutY="41.0" text="V051" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="486.0" layoutY="16.0" text="Vet Name" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="472.0" layoutY="61.0" text="Clinic Name" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="278.0" layoutY="115.0" text="Specialization" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="445.0" layoutY="104.0" text="License Number" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="500.0" layoutY="148.0" text="Contact" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="516.0" layoutY="191.0" text="Email" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="498.0" layoutY="235.0" text="Address" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="481.0" layoutY="279.0" text="Availability" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtVetName" layoutX="561.0" layoutY="12.0" prefHeight="31.0" prefWidth="262.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtClinicName" layoutX="561.0" layoutY="56.0" prefHeight="31.0" prefWidth="262.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtVetLicenseNumber" layoutX="561.0" layoutY="99.0" prefHeight="31.0" prefWidth="262.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtContact" layoutX="561.0" layoutY="143.0" prefHeight="31.0" prefWidth="262.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtEmail" layoutX="561.0" layoutY="186.0" prefHeight="31.0" prefWidth="262.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtAddress" layoutX="561.0" layoutY="230.0" prefHeight="31.0" prefWidth="262.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <ComboBox fx:id="comboAvailability" layoutX="562.0" layoutY="274.0" prefHeight="31.0" prefWidth="262.0" />
+      <VBox alignment="CENTER" layoutX="860.0" layoutY="73.0" prefHeight="31.0" prefWidth="140.0" spacing="20.0">
          <children>
-            <TextField fx:id="txtVetSearch" />
-            <Button mnemonicParsing="false" onAction="#btnVetSearchOnAction" text="Search" />
-         </children>
-      </HBox>
-      <VBox alignment="CENTER" layoutX="733.0" layoutY="108.0" prefHeight="124.0" prefWidth="174.0" spacing="13.0">
-         <children>
-            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnVetSaveOnAction" prefHeight="30.0" prefWidth="120.0" text="Save" />
-            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnVetUpdateOnAction" prefHeight="30.0" prefWidth="120.0" text="Update" />
-            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnVetDeleteOnAction" prefHeight="30.0" prefWidth="120.0" text="Delete" />
-            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnVetResetOnAction" prefHeight="30.0" prefWidth="120.0" text="Reset" />
-            <Button fx:id="btnGenRep" mnemonicParsing="false" onAction="#btnVetGenReport" prefHeight="30.0" prefWidth="120.0" text="Generate Report" />
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnVetSaveOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Save">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnVetResetOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Reset">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnVetUpdateOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Update">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnGenRep" mnemonicParsing="false" onAction="#btnVetGenReport" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Generate Report">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnVetDeleteOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #EA2027;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
          </children>
       </VBox>
-      <TableView fx:id="tblVet" layoutY="341.0" onMouseClicked="#onClickTable" prefHeight="262.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <TableView fx:id="tblVet" layoutY="376.0" onMouseClicked="#onClickTable" prefHeight="228.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <columns>
-          <TableColumn fx:id="colVetId" prefWidth="75.0" text="C1" />
-          <TableColumn fx:id="colVetName" prefWidth="75.0" text="C2" />
-            <TableColumn fx:id="colVetClinicName" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colVetSpecialization" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colVetLicenseNum" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colVetContact" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colVetEmail" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colVetAddress" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colVetAvailability" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colVetSalary" prefWidth="75.0" text="Column X" />
+          <TableColumn fx:id="colVetId" prefWidth="75.0" text="Vet ID" />
+          <TableColumn fx:id="colVetName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colVetClinicName" prefWidth="75.0" text="Clinic Name" />
+            <TableColumn fx:id="colVetSpecialization" prefWidth="75.0" text="Specialization" />
+            <TableColumn fx:id="colVetLicenseNum" prefWidth="75.0" text="License Number" />
+            <TableColumn fx:id="colVetContact" prefWidth="75.0" text="Contact" />
+            <TableColumn fx:id="colVetEmail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="colVetAddress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="colVetAvailability" prefWidth="75.0" text="Availability" />
+            <TableColumn fx:id="colVetSalary" prefWidth="75.0" text="Salary" />
         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
-      <Label layoutX="415.0" layoutY="236.0" text="Salary:" />
-      <TextField fx:id="txtSalary" layoutX="465.0" layoutY="232.0" />
-      <ComboBox fx:id="comboSpecialization" layoutX="197.0" layoutY="179.0" prefWidth="150.0" />
+      <Label layoutX="514.0" layoutY="323.0" text="Salary" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtSalary" layoutX="563.0" layoutY="318.0" prefHeight="31.0" prefWidth="262.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <ComboBox fx:id="comboSpecialization" layoutX="223.0" layoutY="146.0" prefHeight="25.0" prefWidth="202.0" />
    </children>
 </AnchorPane>

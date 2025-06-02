@@ -134,7 +134,7 @@ public class MedicalInfoModel {
                 String treatment = resultSet.getString("treatments");
                 String medication = resultSet.getString("medications");
                 String vetNote = resultSet.getString("vet_notes");
-                Boolean hasLabReport = Boolean.valueOf(resultSet.getString("has_lab_report"));
+                String hasLabReport = resultSet.getString("has_lab_report");
                 String labReportReference = resultSet.getString("lab_report_reference");
 
                 MedicalRecordDto medicalRecordDto = new MedicalRecordDto(

@@ -7,53 +7,92 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="603.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.EmpRescuerController">
    <children>
-      <Label layoutX="98.0" layoutY="64.0" text="Rescuer ID:" />
-      <Label fx:id="lblRescuerId" layoutX="171.0" layoutY="64.0" text="R051" />
-      <Label layoutX="74.0" layoutY="113.0" text="Rescuer Name:" />
-      <Label layoutX="59.0" layoutY="155.0" text="Rescuer Specialty:" />
-      <Label layoutX="75.0" layoutY="198.0" text="Rescuer Status:" />
-      <Label layoutX="355.0" layoutY="64.0" text="Email:" />
-      <Label layoutX="342.0" layoutY="105.0" text="Address:" />
-      <Label layoutX="344.0" layoutY="147.0" text="Contact:" />
-      <Label layoutX="352.0" layoutY="198.0" text="Salary:" />
-      <TextField fx:id="txtRescuerName" layoutX="157.0" layoutY="109.0" />
-      <ComboBox fx:id="comboRescuerSpecialty" layoutX="157.0" layoutY="151.0" prefWidth="150.0" />
-      <ComboBox fx:id="comboRescuerStatus" layoutX="157.0" layoutY="194.0" prefWidth="150.0" />
-      <TextField fx:id="txtEmail" layoutX="388.0" layoutY="60.0" />
-      <TextField fx:id="txtAddress" layoutX="388.0" layoutY="101.0" />
-      <TextField fx:id="txtContact" layoutX="388.0" layoutY="143.0" />
-      <TextField fx:id="txtSalary" layoutX="388.0" layoutY="194.0" />
-      <HBox alignment="CENTER" layoutX="656.0" layoutY="60.0" prefHeight="25.0" prefWidth="243.0" spacing="13.0">
+      <Label layoutX="302.0" layoutY="13.0" text="Rescuer ID" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="lblRescuerId" layoutX="325.0" layoutY="47.0" text="R051" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="460.0" layoutY="17.0" text="Rescuer Name" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="440.0" layoutY="62.0" text="Rescuer Specialty" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="459.0" layoutY="106.0" text="Rescuer Status" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="522.0" layoutY="152.0" text="Email" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="503.0" layoutY="198.0" text="Address" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="505.0" layoutY="240.0" text="Contact" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="517.0" layoutY="287.0" text="Salary" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtRescuerName" layoutX="565.0" layoutY="12.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
+      <ComboBox fx:id="comboRescuerSpecialty" layoutX="565.0" layoutY="56.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
+      <ComboBox fx:id="comboRescuerStatus" layoutX="565.0" layoutY="101.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
+      <TextField fx:id="txtEmail" layoutX="567.0" layoutY="146.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
+      <TextField fx:id="txtAddress" layoutX="566.0" layoutY="191.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
+      <TextField fx:id="txtContact" layoutX="566.0" layoutY="236.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
+      <TextField fx:id="txtSalary" layoutX="566.0" layoutY="281.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
+      <VBox alignment="CENTER" layoutX="851.0" layoutY="59.0" prefHeight="235.0" prefWidth="149.0" spacing="20.0">
          <children>
-            <TextField fx:id="txtRescuerSearch" />
-            <Button mnemonicParsing="false" onAction="#btnRescuerSearchOnAction" text="Search" />
-         </children>
-      </HBox>
-      <VBox alignment="CENTER" layoutX="678.0" layoutY="122.0" prefHeight="124.0" prefWidth="174.0" spacing="13.0">
-         <children>
-            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnRescuerSaveOnAction" prefHeight="30.0" prefWidth="120.0" text="Save" />
-            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnRescuerUpdateOnAction" prefHeight="30.0" prefWidth="120.0" text="Update" />
-            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnRescuerDeleteOnAction" prefHeight="30.0" prefWidth="120.0" text="Delete" />
-            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnRescuerResetOnAction" prefHeight="30.0" prefWidth="120.0" text="Reset" />
-            <Button fx:id="btnGenRep" mnemonicParsing="false" onAction="#btnRescuerGenReportOnAction" prefHeight="30.0" prefWidth="120.0" text="Generate Report" />
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnRescuerSaveOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Save">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnRescuerResetOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Reset">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnRescuerUpdateOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Update">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnGenRep" mnemonicParsing="false" onAction="#btnRescuerGenReportOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Generate Report">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnRescuerDeleteOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #EA2027;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
          </children>
       </VBox>
-      <TableView fx:id="tblRescuer" layoutY="348.0" onMouseClicked="#onClickTable" prefHeight="255.0" prefWidth="1000.0">
+      <TableView fx:id="tblRescuer" layoutY="334.0" onMouseClicked="#onClickTable" prefHeight="255.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <columns>
-          <TableColumn fx:id="colResId" prefWidth="75.0" text="C1" />
-          <TableColumn fx:id="colResName" prefWidth="75.0" text="C2" />
-            <TableColumn fx:id="colResSpecialty" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colResStatus" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colResEmail" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colResAddress" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colResContact" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colResSalary" prefWidth="75.0" text="Column X" />
+          <TableColumn fx:id="colResId" prefWidth="75.0" text="Rescuer ID" />
+          <TableColumn fx:id="colResName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colResSpecialty" prefWidth="75.0" text="Specialty" />
+            <TableColumn fx:id="colResStatus" prefWidth="75.0" text="Status" />
+            <TableColumn fx:id="colResEmail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="colResAddress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="colResContact" prefWidth="75.0" text="Contact" />
+            <TableColumn fx:id="colResSalary" prefWidth="75.0" text="Salary" />
         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
    </children>
 </AnchorPane>

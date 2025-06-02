@@ -6,44 +6,74 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="603.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.EmpAdminController">
    <children>
-      <Label layoutX="145.0" layoutY="68.0" text="Admin ID:" />
-      <Label fx:id="lblAdminId" layoutX="219.0" layoutY="68.0" text="A001" />
-      <Label layoutX="125.0" layoutY="121.0" text="Admin Name:" />
-      <Label layoutX="118.0" layoutY="165.0" text="Admin Contact:" />
-      <Label layoutX="129.0" layoutY="210.0" text="Admin Email:" />
-      <Label layoutX="402.0" layoutY="68.0" text="Admin Address:" />
-      <TextField fx:id="txtAdminName" layoutX="207.0" layoutY="117.0" />
-      <TextField fx:id="txtAdminContact" layoutX="207.0" layoutY="161.0" />
-      <TextField fx:id="txtAdminEmail" layoutX="207.0" layoutY="206.0" />
-      <TextField fx:id="txtAdminAddress" layoutX="494.0" layoutY="64.0" />
-      <HBox alignment="CENTER" layoutX="705.0" layoutY="61.0" prefHeight="25.0" prefWidth="238.0" spacing="13.0">
+      <Label layoutX="313.0" layoutY="39.0" text="Admin ID" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="lblAdminId" layoutX="324.0" layoutY="69.0" text="A001" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="464.0" layoutY="82.0" text="Admin Name" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="453.0" layoutY="131.0" text="Admin Contact" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="468.0" layoutY="179.0" text="Admin Email" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="451.0" layoutY="232.0" text="Admin Address" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtAdminName" layoutX="561.0" layoutY="77.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
+      <TextField fx:id="txtAdminContact" layoutX="561.0" layoutY="126.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
+      <TextField fx:id="txtAdminEmail" layoutX="561.0" layoutY="174.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
+      <TextField fx:id="txtAdminAddress" layoutX="561.0" layoutY="227.0" prefHeight="31.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
+      <VBox alignment="CENTER" layoutX="861.0" layoutY="48.0" prefHeight="235.0" prefWidth="139.0" spacing="20.0">
          <children>
-            <TextField fx:id="txtAdminSearch" />
-            <Button mnemonicParsing="false" onAction="#btnAdminSearchOnAction" text="Search" />
-         </children>
-      </HBox>
-      <VBox alignment="CENTER" layoutX="774.0" layoutY="106.0" prefHeight="124.0" prefWidth="174.0" spacing="13.0">
-         <children>
-            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnAdminSaveOnAction" prefHeight="30.0" prefWidth="120.0" text="Save" />
-            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnAdminUpdateOnAction" prefHeight="30.0" prefWidth="120.0" text="Update" />
-            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnAdminDeleteOnAction" prefHeight="30.0" prefWidth="120.0" text="Delete" />
-            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnAdminResetOnAction" prefHeight="30.0" prefWidth="120.0" text="Reset" />
-            <Button fx:id="btnGenRep" mnemonicParsing="false" onAction="#btnAdminGenReportOnAction" prefHeight="30.0" prefWidth="120.0" text="Generate Report" />
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnAdminSaveOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Save">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnAdminResetOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Reset">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnAdminUpdateOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Update">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnGenRep" mnemonicParsing="false" onAction="#btnAdminGenReportOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Generate Report">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnAdminDeleteOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #EA2027;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
          </children>
       </VBox>
-      <TableView fx:id="tblAdmin" layoutY="332.0" onMouseClicked="#onClickTable" prefHeight="271.0" prefWidth="1000.0">
+      <TableView fx:id="tblAdmin" layoutY="382.0" onMouseClicked="#onClickTable" prefHeight="265.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <columns>
-          <TableColumn fx:id="colAdminId" prefWidth="75.0" text="C1" />
-          <TableColumn fx:id="colAdminName" prefWidth="75.0" text="C2" />
-            <TableColumn fx:id="colAdminContact" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colAdminEmail" prefWidth="75.0" text="Column X" />
-            <TableColumn fx:id="colAdminAddress" prefWidth="75.0" text="Column X" />
+          <TableColumn fx:id="colAdminId" prefWidth="75.0" text="Admin ID" />
+          <TableColumn fx:id="colAdminName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colAdminContact" prefWidth="75.0" text="Contact" />
+            <TableColumn fx:id="colAdminEmail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="colAdminAddress" prefWidth="75.0" text="Address" />
         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
    </children>
 </AnchorPane>

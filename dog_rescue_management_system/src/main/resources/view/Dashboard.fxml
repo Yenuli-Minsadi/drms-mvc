@@ -10,14 +10,14 @@
    <children>
       <AnchorPane prefHeight="81.0" prefWidth="1000.0" style="-fx-background-color: #b71540;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <HBox layoutX="86.0" layoutY="76.0" prefHeight="27.0" prefWidth="915.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <HBox layoutY="76.0" prefHeight="27.0" prefWidth="915.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#btnRequestOnAction" prefHeight="80.0" prefWidth="150.0" style="-fx-background-color: #130f40;" text="Requests" textFill="#8fe7ff">
                      <padding>
                         <Insets top="4.0" />
                      </padding>
                      <font>
-                        <Font name="Microsoft PhagsPa" size="16.0" />
+                        <Font size="17.0" />
                      </font>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#btnDogsOnAction" prefHeight="80.0" prefWidth="150.0" style="-fx-background-color: #130f40;" text="Dogs" textFill="#8fe7ff">
@@ -25,7 +25,7 @@
                         <Insets top="4.0" />
                      </padding>
                      <font>
-                        <Font name="Microsoft PhagsPa" size="16.0" />
+                        <Font size="17.0" />
                      </font>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#btnEmployeesOnAction" prefHeight="80.0" prefWidth="150.0" style="-fx-background-color: #130f40;" text="Employees" textFill="#8fe7ff">
@@ -33,7 +33,7 @@
                         <Insets top="4.0" />
                      </padding>
                      <font>
-                        <Font name="Microsoft PhagsPa" size="16.0" />
+                        <Font size="17.0" />
                      </font>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#btnDonorsOnAction" prefHeight="80.0" prefWidth="150.0" style="-fx-background-color: #130f40;" text="Donors" textFill="#8fe7ff">
@@ -41,7 +41,7 @@
                         <Insets top="4.0" />
                      </padding>
                      <font>
-                        <Font name="Microsoft PhagsPa" size="16.0" />
+                        <Font size="17.0" />
                      </font>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#btnDonationOnAction" prefHeight="80.0" prefWidth="150.0" style="-fx-background-color: #130f40;" text="Appointments" textFill="#8fe7ff">
@@ -49,7 +49,7 @@
                         <Insets top="4.0" />
                      </padding>
                      <font>
-                        <Font name="Microsoft PhagsPa" size="16.0" />
+                        <Font size="17.0" />
                      </font>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#btnSheltersOnAction" prefHeight="80.0" prefWidth="150.0" style="-fx-background-color: #130f40;" text="Shelters" textFill="#8fe7ff">
@@ -57,7 +57,7 @@
                         <Insets top="4.0" />
                      </padding>
                      <font>
-                        <Font name="Microsoft PhagsPa" size="16.0" />
+                        <Font size="17.0" />
                      </font>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#btnAdoptersOnAction" prefHeight="80.0" prefWidth="150.0" style="-fx-background-color: #130f40;" text="Adopters" textFill="#8fe7ff">
@@ -65,7 +65,7 @@
                         <Insets top="4.0" />
                      </padding>
                      <font>
-                        <Font name="Microsoft PhagsPa" size="16.0" />
+                        <Font size="17.0" />
                      </font>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#btnAdoptionOnAction" prefHeight="80.0" prefWidth="150.0" style="-fx-background-color: #130f40;" text="Adoption" textFill="#8fe7ff">
@@ -73,7 +73,7 @@
                         <Insets top="4.0" />
                      </padding>
                      <font>
-                        <Font name="Microsoft PhagsPa" size="16.0" />
+                        <Font size="17.0" />
                      </font>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#btnExpensesOnAction" prefHeight="80.0" prefWidth="150.0" style="-fx-background-color: #130f40;" text="Expenses" textFill="#8fe7ff">
@@ -81,7 +81,7 @@
                         <Insets top="4.0" />
                      </padding>
                      <font>
-                        <Font name="Microsoft PhagsPa" size="16.0" />
+                        <Font size="17.0" />
                      </font>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#btnReportsOnAction" prefHeight="80.0" prefWidth="150.0" style="-fx-background-color: #130f40;" text="Reports" textFill="#8fe7ff">
@@ -89,19 +89,19 @@
                         <Insets top="4.0" />
                      </padding>
                      <font>
-                        <Font name="Microsoft PhagsPa" size="16.0" />
+                        <Font size="17.0" />
                      </font>
                   </Button>
                </children>
             </HBox>
             <Button blendMode="SRC_ATOP" layoutX="899.0" layoutY="21.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="31.0" prefWidth="91.0" style="-fx-background-color: #fff;" text="Logout&gt;" textFill="#130f40" AnchorPane.rightAnchor="10.0">
                <font>
-                  <Font size="15.0" />
+                  <Font size="16.0" />
                </font>
             </Button>
             <Button blendMode="SRC_ATOP" layoutX="10.0" layoutY="21.0" mnemonicParsing="false" onAction="#btnHomeOnAction" prefHeight="31.0" prefWidth="91.0" style="-fx-background-color: #000;" text="HOME" textFill="WHITE">
                <font>
-                  <Font name="Microsoft PhagsPa" size="15.0" />
+                  <Font size="16.0" />
                </font>
             </Button>
          </children>

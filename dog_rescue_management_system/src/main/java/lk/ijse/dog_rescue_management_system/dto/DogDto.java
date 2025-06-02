@@ -6,8 +6,8 @@ import java.time.LocalDate;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
 @Setter
+@Getter
 @ToString
 public class DogDto {
 
@@ -15,10 +15,10 @@ public class DogDto {
     private String rescueRequestId;
     private String dogName;
     private String dogBreed;
-    private LocalDate birthDate;
     private String dogColor;
     private String dogSize;
     private String dogGender;
     private String dogStatus;
+    private String dogEstAge;
 
 }

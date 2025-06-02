@@ -44,7 +44,7 @@ public class MedicalInfoController implements Initializable {
     public TableColumn<MedicalInfoTM, String> colTreatments;
     public TableColumn<MedicalInfoTM, String> colMedications;
     public TableColumn<MedicalInfoTM, String> colVetNotes;
-    public TableColumn<MedicalInfoTM, Boolean> colLabRep;
+    public TableColumn<MedicalInfoTM, String> colLabRep;
     public TableColumn<MedicalInfoTM, String> colLabRepRef;
 
     @FXML
@@ -76,7 +76,7 @@ public class MedicalInfoController implements Initializable {
         String treatment = txtTreatments.getText();
         String medication = txtMedication.getText();
         String vetNote = txtNotes.getText();
-        Boolean hasLabReport = Boolean.valueOf(comboLabReport.getValue().toString());
+        String hasLabReport = comboLabReport.getValue().toString();
         String labReportReference = txtLabReportRef.getText();
 
 
@@ -203,7 +203,7 @@ public class MedicalInfoController implements Initializable {
         String treatment = txtTreatments.getText();
         String medication = txtMedication.getText();
         String vetNote = txtNotes.getText();
-        Boolean hasLabReport = Boolean.valueOf(comboLabReport.getValue());
+        String hasLabReport = comboLabReport.getValue();
         String labReportReference = txtLabReportRef.getText();
 
 
@@ -285,7 +285,7 @@ public class MedicalInfoController implements Initializable {
             txtTreatments.setText(selectedMedRec.getTreatment());
             txtMedication.setText(selectedMedRec.getMedication());
             txtNotes.setText(selectedMedRec.getVetNote());
-            comboLabReport.setValue(String.valueOf(selectedMedRec.getHasLabReport()));
+            comboLabReport.setValue(selectedMedRec.getHasLabReport());
             txtLabReportRef.setText(selectedMedRec.getLabReportReference());
 
             // save button disable
