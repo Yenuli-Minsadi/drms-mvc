@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<?import javafx.scene.chart.PieChart?>
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.DonVsExpController">
+    <PieChart fx:id="donationExpensePieChart" layoutX="100" layoutY="100" prefHeight="450" prefWidth="450"/>
+</AnchorPane>

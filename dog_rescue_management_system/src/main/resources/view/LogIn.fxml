@@ -52,12 +52,12 @@
                         <Font name="Segoe UI Semilight" size="16.0" />
                      </font>
                   </Label>
-                  <Button fx:id="loginButton" layoutX="426.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnLogInOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #130f40; -fx-border-color: #fff; -fx-border-radius: 5;" text="Log In" textFill="WHITE">
+                  <Button fx:id="loginButton" layoutX="426.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnLogInOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #130f40; -fx-border-color: #fff; -fx-border-radius: 5;" stylesheets="@style.css" text="Log In" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Label layoutX="435.0" layoutY="292.0" onMouseClicked="#lblForgotPasswordOnMouseClicked" styleClass="clickable-label" text="Forgot Password?" textFill="#acaeb2">
+                  <Label layoutX="447.0" layoutY="328.0" onMouseClicked="#lblForgotPasswordOnMouseClicked" styleClass="clickable-label" text="Forgot Password?" textFill="#acaeb2">
                      <font>
                         <Font name="Microsoft PhagsPa" size="12.0" />
                      </font>
@@ -75,7 +75,6 @@
                         <DropShadow blurType="TWO_PASS_BOX" height="8.32" radius="10.6925" width="36.45" />
                      </effect>
                   </Label>
-                  <Label layoutX="172.0" layoutY="292.0" text="Create an Account" textFill="#acaeb2" />
                   <Label layoutX="224.0" layoutY="-22.0" prefHeight="73.0" prefWidth="253.0" text="Happy Paws Happy Hearts" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Segoe UI Semilight" size="22.0" />

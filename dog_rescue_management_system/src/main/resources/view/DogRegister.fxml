@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="603.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.DogRegisterController">
+<AnchorPane fx:id="ancReg" prefHeight="603.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.DogRegisterController">
    <children>
       <Label layoutX="307.0" layoutY="15.0" text="Dog ID" textFill="WHITE">
          <font>
@@ -60,7 +60,7 @@
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <TableView fx:id="tblDogReg" layoutX="-1.0" layoutY="387.0" onMouseClicked="#onClickTable" prefHeight="207.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <TableView fx:id="tblDogReg" layoutX="8.0" layoutY="387.0" onMouseClicked="#onClickTable" prefHeight="200.0" prefWidth="983.0" style="-fx-font-size: 15px;" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="9.0">
         <columns>
           <TableColumn fx:id="colDogId" prefWidth="100.0" text="Dog ID" />
           <TableColumn fx:id="colRescueRequestId" prefWidth="123.0" text="Rescue Request ID" />
@@ -81,25 +81,21 @@
             <Font name="System Bold" size="20.0" />
          </font></Label>
       <ComboBox fx:id="comboDogStatus" layoutX="528.0" layoutY="281.0" prefHeight="30.0" prefWidth="262.0" style="-fx-background-radius: 7;" />
-      <VBox alignment="CENTER" layoutX="826.0" layoutY="73.0" prefHeight="124.0" prefWidth="174.0" spacing="20.0">
+      <VBox alignment="CENTER" layoutX="826.0" layoutY="86.0" prefHeight="124.0" prefWidth="174.0" spacing="20.0">
          <children>
-            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnDogSaveOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Save">
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnDogSaveOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" stylesheets="@style.css" text="Save">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
-            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnDogResetOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Reset">
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnDogResetOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" stylesheets="@style.css" text="Reset">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
-            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnDogUpdateOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Update">
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnDogUpdateOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" stylesheets="@style.css" text="Update">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
-            <Button fx:id="btnGenReport" mnemonicParsing="false" onAction="#btnDogGenerateReportOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Generate Report">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font></Button>
-            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDogDeleteOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #EA2027;" text="Delete" textFill="WHITE">
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDogDeleteOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #EA2027;" stylesheets="@style.css" text="Delete" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>

@@ -98,4 +98,16 @@ public class AppointmentModel {
         }
         return appointmentDtoArrayList;
     }
+
+    public int getScheduledAppointmentCount() throws SQLException, ClassNotFoundException {
+        ResultSet resultSet = CrudUtil.execute(
+                "SELECT COUNT(*) FROM appointments WHERE status = 'Scheduled'"
+        );
+
+        if (resultSet.next()) {
+            return resultSet.getInt(1);
+        }
+
+        return 0;
+    }
 }

@@ -148,4 +148,13 @@ public class DogRegisterModel {
         return dogRegisterDtoArrayList;
     }
 
+    public int getDogCount() throws SQLException, ClassNotFoundException {
+        ResultSet rs = CrudUtil.execute("SELECT COUNT(*) FROM dog");
+        if (rs.next()) {
+            return rs.getInt(1);
+        }
+        return 0;
+    }
+
+
 }

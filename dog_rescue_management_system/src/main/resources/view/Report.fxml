@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="homePane" prefHeight="603.0" prefWidth="1000.0" style="-fx-background-color: #130f40;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.ReportController">
    <children>
-      <Label layoutX="472.0" layoutY="101.0" text="Report" textFill="WHITE" />
+      <ImageView fitHeight="518.0" fitWidth="345.0" layoutX="657.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="657.0" AnchorPane.rightAnchor="-0.5858154296875">
+         <image>
+            <Image url="@../images/download%20(3).jpeg" />
+         </image>
+      </ImageView>
+      <Line endX="100.0" layoutX="558.0" layoutY="21.70710676908493" startX="-279.0" startY="1.769599437713623" AnchorPane.bottomAnchor="582.2303714752197" AnchorPane.topAnchor="21.0" />
+      <Line endX="-369.328369140625" endY="505.0" layoutX="650.2070922851562" layoutY="32.0" startX="-370.9141845703125" startY="-7.816184997558594" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="723.0" />
+      <Line endX="81.0" endY="506.0" layoutX="577.0" layoutY="31.70709228515625" startX="-298.5858154296875" startY="507.0" AnchorPane.bottomAnchor="67.0" AnchorPane.topAnchor="537.0" />
+      <TextArea fx:id="txtDesc" editable="false" layoutX="288.0" layoutY="36.0" prefHeight="488.0" prefWidth="359.0" text="Happy Paws Happy Hearts is a JavaFX-based Dog Rescue Management System (DRMS) designed to streamline and enhance the operations of a dog rescue center. It offers a centralized dashboard for administrators to manage and monitor various modules, including:&#10;&#10;Dog Profiles: Track dog bios, health, vaccinations, and adoption status.&#10;&#10;Requests &amp; Adopters: Manage adoption requests and maintain adopter information.&#10;&#10;Donors &amp; Donations: Record donor data and financial contributions.&#10;&#10;Appointments &amp; Shelters: Schedule visits and oversee shelter capacities.&#10;&#10;Employees &amp; Expenses: Organize staff details and monitor rescue center expenditures.&#10;&#10;Adoption Records &amp; Insights: Analyze adoption trends and center performance.&#10;&#10;This system improves transparency, organization, and decision-making while supporting the ultimate goal of finding loving homes for rescued dogs.">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextArea>
    </children>
 </AnchorPane>

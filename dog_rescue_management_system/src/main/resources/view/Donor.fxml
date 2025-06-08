@@ -51,31 +51,27 @@
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <VBox alignment="CENTER" layoutX="826.0" layoutY="2.0" prefHeight="124.0" prefWidth="174.0" spacing="20.0">
+      <VBox alignment="CENTER" layoutX="826.0" layoutY="31.0" prefHeight="124.0" prefWidth="174.0" spacing="20.0">
          <children>
-            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnDonorSaveOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Save">
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnDonorSaveOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" stylesheets="@style.css" text="Save">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
-            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnDonorResetOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Reset">
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#btnDonorResetOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" stylesheets="@style.css" text="Reset">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
-            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnDonorUpdateOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Update">
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnDonorUpdateOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" stylesheets="@style.css" text="Update">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
-            <Button fx:id="btnGenRep" mnemonicParsing="false" onAction="#btnDonorGenerateReportOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #C68EFD;" text="Generate Report">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font></Button>
-            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDonorDeleteOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #EA2027;" text="Delete" textFill="WHITE">
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDonorDeleteOnAction" prefHeight="31.0" prefWidth="140.0" style="-fx-background-radius: 25; -fx-background-color: #EA2027;" stylesheets="@style.css" text="Delete" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
          </children>
       </VBox>
-      <TableView fx:id="tblDonor" layoutX="-4.0" layoutY="308.0" onMouseClicked="#onClickTable" prefHeight="297.0" prefWidth="1004.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <TableView fx:id="tblDonor" layoutX="8.0" layoutY="308.0" onMouseClicked="#onClickTable" prefHeight="289.0" prefWidth="984.0" style="-fx-font-size: 15px;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
         <columns>
           <TableColumn fx:id="colDonorId" prefWidth="75.0" text="Donor ID" />
           <TableColumn fx:id="colDonorName" prefWidth="75.0" text="Name" />

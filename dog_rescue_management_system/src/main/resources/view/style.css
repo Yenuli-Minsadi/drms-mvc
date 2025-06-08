@@ -1,9 +1,61 @@
-loginButton {
+/* Login button styles */
+#loginButton {
     -fx-background-color: #0d1b4c;
     -fx-text-fill: white;
 }
 
 #loginButton:hover {
-    -fx-background-color: #6a89cc;
+    -fx-background-color: #38ada9;
     -fx-cursor: hand;
+}
+
+/* Navigation button styles */
+.nav-button {
+    -fx-background-color: #130f40;
+    -fx-text-fill: #8fe7ff;
+    -fx-font-size: 17px;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.nav-button:hover {
+    -fx-background-color: #1e3c72;
+    -fx-cursor: hand;
+}
+
+/* Active navigation button style */
+.nav-button-active {
+    -fx-font-weight: bold;
+    -fx-background-color: #1e3c72;
+    -fx-text-fill:#008080;
+    -fx-border-color: #8fe7ff;
+    -fx-border-width: 0 0 3 0;
+}
+
+.nav-button-active:hover {
+    -fx-background-color: #2d5aa0;
+}
+
+/* Home button specific hover style */
+#homeButton:hover {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+/* Logout button specific hover style */
+#logoutButton:hover {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+/* General button style */
+.button {
+    -fx-cursor: hand;
+}
+
+/* General button hover effects (will be overridden by specific ID selectors above) */
+.button:hover {
+    -fx-opacity: 0.8;
 }

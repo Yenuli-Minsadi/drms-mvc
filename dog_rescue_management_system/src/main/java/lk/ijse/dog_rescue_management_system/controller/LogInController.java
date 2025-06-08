@@ -100,8 +100,7 @@ public class LogInController {
                 // Set current user in session
                 SessionManager.getInstance().setCurrentUser(authenticatedUser);
 
-
-                Stage currentStage = (Stage) ancLogin.getScene().getWindow();
+//                Stage currentStage = (Stage) ancLogin.getScene().getWindow();
                 loadDashboard(authenticatedUser);
 
             } else {
@@ -128,9 +127,9 @@ public class LogInController {
             case "vet":
                 fxmlPath = "/view/VetDashboard.fxml";
                 break;
-            case "owner":
-                fxmlPath = "/view/Dashboard.fxml";
-                break;
+//            case "owner":
+//                fxmlPath = "/view/Dashboard.fxml";
+//                break;
             default:
                 fxmlPath = "/view/Dashboard.fxml";
                 break;
@@ -150,7 +149,7 @@ public class LogInController {
         Stage currentStage = (Stage) ancLogin.getScene().getWindow();
         currentStage.close(); //
 
-        // Show welcome alert after loading
+        // welcome alert after loading
         String welcomeMessage = "Welcome, " + user.getUserName() + "!";
         switch (role) {
             case "admin":
@@ -159,9 +158,9 @@ public class LogInController {
             case "vet":
                 welcomeMessage += " (Veterinarian)";
                 break;
-            case "owner":
-                welcomeMessage += " (Owner)";
-                break;
+//            case "owner":
+//                welcomeMessage += " (Owner)";
+//                break;
         }
 
         Alert welcomeAlert = new Alert(Alert.AlertType.INFORMATION);

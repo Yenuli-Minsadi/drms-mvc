@@ -11,28 +11,28 @@
 
 <AnchorPane prefHeight="603.0" prefWidth="1000.0" style="-fx-background-color: #130f40;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dog_rescue_management_system.controller.VetAppointmentController">
    <children>
-      <Label layoutX="419.0" layoutY="72.0" text="Vet ID" textFill="WHITE">
+      <Label layoutX="444.0" layoutY="72.0" text="Vet ID" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Label>
-      <Label layoutX="290.0" layoutY="120.0" text="Current Availability Status" textFill="WHITE">
+      <Label layoutX="315.0" layoutY="120.0" text="Current Availability Status" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Label>
-      <TextField fx:id="txtVetId" layoutX="469.0" layoutY="66.0" prefHeight="31.0" prefWidth="262.0">
+      <TextField fx:id="txtVetId" layoutX="494.0" layoutY="66.0" prefHeight="31.0" prefWidth="262.0">
          <font>
             <Font size="15.0" />
          </font></TextField>
-      <ComboBox fx:id="comboStatus" layoutX="469.0" layoutY="116.0" prefHeight="31.0" prefWidth="262.0" />
-      <Button layoutX="765.0" layoutY="61.0" mnemonicParsing="false" onAction="#btnMyApptOnAction" style="-fx-background-radius: 25; -fx-background-color: #8fe7ff;" text="Load My Appointments">
+      <ComboBox fx:id="comboStatus" layoutX="494.0" layoutY="116.0" prefHeight="31.0" prefWidth="262.0" />
+      <Button layoutX="790.0" layoutY="61.0" mnemonicParsing="false" onAction="#btnMyApptOnAction" style="-fx-background-radius: 25; -fx-background-color: #8fe7ff;" stylesheets="@style.css" text="Load Vet Appointments">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>
-      <Button layoutX="798.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnUpdateStatusOnAction" style="-fx-background-radius: 25; -fx-background-color: #9FB4FF;" text="Update Status">
+      <Button layoutX="823.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnUpdateStatusOnAction" style="-fx-background-radius: 25; -fx-background-color: #9FB4FF;" stylesheets="@style.css" text="Update Status">
          <font>
             <Font size="16.0" />
          </font></Button>
-      <TableView fx:id="tblAppt" layoutY="242.0" onMouseClicked="#onClickTable" prefHeight="362.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <TableView fx:id="tblAppt" layoutX="7.0" layoutY="244.0" onMouseClicked="#onClickTable" prefHeight="351.0" prefWidth="985.0" style="-fx-font-size: 15px;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="244.0">
         <columns>
           <TableColumn fx:id="colApptId" prefWidth="75.0" text="Appointment ID" />
           <TableColumn fx:id="colDogId" prefWidth="75.0" text="Dog ID" />
@@ -45,9 +45,9 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Label layoutX="513.0" layoutY="215.0" text="My Upcoming Appointments" textFill="WHITE">
+      <Label layoutX="485.0" layoutY="181.0" prefHeight="39.0" prefWidth="315.0" text="Upcoming Appointments" textFill="WHITE" AnchorPane.bottomAnchor="383.0" AnchorPane.leftAnchor="485.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="181.0">
          <font>
-            <Font size="17.0" />
+            <Font size="27.0" />
          </font></Label>
    </children>
 </AnchorPane>

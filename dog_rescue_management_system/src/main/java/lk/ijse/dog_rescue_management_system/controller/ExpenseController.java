@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import lk.ijse.dog_rescue_management_system.db.DBConnection;
 import lk.ijse.dog_rescue_management_system.dto.ExpenseDto;
 import lk.ijse.dog_rescue_management_system.dto.RequestCaseDto;
 import lk.ijse.dog_rescue_management_system.model.ExpenseModel;
@@ -15,12 +16,18 @@ import lk.ijse.dog_rescue_management_system.view.tdm.DonorTM;
 import lk.ijse.dog_rescue_management_system.view.tdm.ExpenseTM;
 import lk.ijse.dog_rescue_management_system.view.tdm.RequestTM;
 import lk.ijse.dog_rescue_management_system.view.tdm.VetTM;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
+
 
 import java.net.URL;
+import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -258,8 +265,22 @@ public class ExpenseController implements Initializable {
         resetPage();
     }
 
-    public void btnExpGenerateReportOnAction(ActionEvent actionEvent) {
+    private double calculateTotalExpenseAmount() {
+        double total = 0;
+        for (ExpenseTM expense : tblExpense.getItems()) {
+            total += expense.getExpenseAmount();
+        }
+        return total;
     }
+
+
+    public void btnExpGenerateReportOnAction(ActionEvent actionEvent) {
+        GenReportController genReportController = new GenReportController();
+        genReportController.genExpReport(calculateTotalExpenseAmount());
+
+    }
+
+
 
     public void btnExpSearchOnAction(ActionEvent actionEvent) {
     }

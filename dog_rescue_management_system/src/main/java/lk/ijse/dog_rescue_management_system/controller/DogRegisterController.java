@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import lk.ijse.dog_rescue_management_system.dto.DogDto;
 import lk.ijse.dog_rescue_management_system.dto.RequestCaseDto;
 import lk.ijse.dog_rescue_management_system.dto.ShelterDto;
@@ -46,6 +47,11 @@ public class DogRegisterController implements Initializable {
     public TableColumn<DogRegisterTM, String> colDogStatus;
     public TableColumn<DogRegisterTM, String> colDogAge;
 
+    @FXML
+    private AnchorPane ancMainDash;
+
+    @FXML
+    private AnchorPane ancReg;
 
     @FXML
     private Button btnDelete;
