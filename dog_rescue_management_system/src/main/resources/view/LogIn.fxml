@@ -83,6 +83,7 @@
                         <DropShadow />
                      </effect>
                   </Label>
+                  <Label layoutX="163.0" layoutY="328.0" text="Create an Account" textFill="#acaeb2" />
                </children>
             </AnchorPane>
          </children>

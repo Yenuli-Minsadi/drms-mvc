@@ -29,7 +29,7 @@
             </Label>
             <Label fx:id="lblDogCount" alignment="CENTER" prefHeight="30.0" prefWidth="71.0" text="dogCount" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="25.0" />
+                  <Font name="System Bold" size="30.0" />
                </font>
             </Label>
          </children>
@@ -43,7 +43,7 @@
             </Label>
             <Label fx:id="lblAdoptedDogs" alignment="CENTER" text="adoptedDogs" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="25.0" />
+                  <Font name="System Bold" size="30.0" />
                </font>
             </Label>
          </children>
@@ -57,7 +57,7 @@
             </Label>
             <Label fx:id="lblTotScheduledAppt" alignment="CENTER" text="Appt" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="25.0" />
+                  <Font name="System Bold" size="30.0" />
                </font>
             </Label>
          </children>
